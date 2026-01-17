@@ -27,7 +27,7 @@ export const FlamesResult = ({ result, meaning, name1, name2, onReset, easterEgg
   const [story] = useState(() => getRandomStory(result as keyof typeof import("@/data/flamesData").RESULT_STORIES));
 
   const handleShare = async () => {
-    const gameUrl = "https://flamesgaming.lovable.app";
+    const gameUrl = "https://flames-umber.vercel.app/";
     const textForClipboard = `${name1} & ${name2} are ${meaning.label}! ${meaning.emoji}\n\n"${story.slice(0, 100)}..."\n\n🔥 Try FLAMES yourself: ${gameUrl}`;
     const textForShare = `${name1} & ${name2} are ${meaning.label}! ${meaning.emoji}\n\n"${story.slice(0, 100)}..."\n\n🔥 Try FLAMES yourself:`;
     
@@ -57,7 +57,6 @@ export const FlamesResult = ({ result, meaning, name1, name2, onReset, easterEgg
             rel="noopener noreferrer"
             className="text-xs text-primary underline"
           >
-            {gameUrl}
           </a>
         </div>,
         { duration: 4000 }
