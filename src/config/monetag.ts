@@ -20,7 +20,23 @@
 // ===========================================
 // PASTE YOUR MONETAG EMBED CODE HERE
 // ===========================================
-export const MONETAG_EMBED_CODE = "";
+export const MONETAG_EMBED_CODE = `
+<script>
+(function () {
+  if (window.__monetagInPagePushLoaded) return;
+  window.__monetagInPagePushLoaded = true;
+
+  (function(s){
+    s.dataset.zone = '10476453';
+    s.src = 'https://nap5k.com/tag.min.js';
+  })([document.documentElement, document.body]
+    .filter(Boolean)
+    .pop()
+    .appendChild(document.createElement('script')));
+})();
+</script>
+`;
+
 // ===========================================
 
 /**
