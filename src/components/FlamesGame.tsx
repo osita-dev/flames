@@ -10,11 +10,10 @@ import { EmojiReactions } from "./EmojiReactions";
 import { DynamicBackground, getThemeFromResult } from "./DynamicBackground";
 import { FlamesCountdown } from "./FlamesCountdown";
 import { WhatIfMode } from "./WhatIfMode";
-import AdBanner from "./AdBanner";
+
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { checkEasterEgg } from "@/data/flamesData";
 import type {  EasterEgg } from "@/data/flamesData";
-import { MONETAG_EMBED_CODE, AD_PLACEMENTS } from "@/config/monetag";
 
 const FLAMES = ["F", "L", "A", "M", "E", "S"] as const;
 
@@ -285,8 +284,7 @@ export const FlamesGame = () => {
                     )}
                   </AnimatePresence>
 
-                  {/* Inline Ad - Input Phase */}
-                  {AD_PLACEMENTS.inputPhase && <AdBanner monetagCode={MONETAG_EMBED_CODE} variant="compact" />}
+                  
                 </motion.div>
               )}
 
@@ -364,12 +362,6 @@ export const FlamesGame = () => {
             </motion.button>
           )}
 
-          {/* Footer Ad - Always visible */}
-          {AD_PLACEMENTS.footer && (
-            <div className="mt-6 w-full">
-              <AdBanner monetagCode={MONETAG_EMBED_CODE} variant="footer" />
-            </div>
-          )}
         </motion.div>
       </div>
     </>
