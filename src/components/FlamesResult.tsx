@@ -5,8 +5,6 @@ import { useState } from "react";
 import { getRandomStory } from "@/data/flamesData";
 import { SparkleEffect } from "./SparkleEffect";
 import type { EasterEgg } from "@/data/flamesData";
-import AdBanner from "./AdBanner";
-import { MONETAG_EMBED_CODE, AD_PLACEMENTS } from "@/config/monetag";
 
 interface FlamesResultProps {
   result: string;
@@ -212,17 +210,7 @@ export const FlamesResult = ({ result, meaning, name1, name2, onReset, easterEgg
         )}
       </AnimatePresence>
 
-      {/* Inline Ad - Result Phase */}
-      {isRevealed && AD_PLACEMENTS.resultPhase && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="pt-2"
-        >
-          <AdBanner monetagCode={MONETAG_EMBED_CODE} variant="inline" />
-        </motion.div>
-      )}
+      
 
       {/* Action buttons */}
       <motion.div

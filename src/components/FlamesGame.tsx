@@ -334,7 +334,7 @@ export const FlamesGame = () => {
                   />
 
                   {/* Inline Ad - Processing Phase */}
-                  {AD_PLACEMENTS.processingPhase && <AdBanner monetagCode={MONETAG_EMBED_CODE} variant="compact" className="mt-4" />}
+                 
                 </motion.div>
               )}
 

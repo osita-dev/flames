@@ -116,18 +116,17 @@
 </body>
 
 <script>
-  (function () {
-    if (window.__monetagInPagePushLoaded) return;
-    window.__monetagInPagePushLoaded = true;
+useEffect(() => {
+  if (window.__monetagInPagePushLoaded) return;
+  window.__monetagInPagePushLoaded = true;
 
-    (function (s) {
-      s.dataset.zone = '10476453';
-      s.src = 'https://nap5k.com/tag.min.js';
-    })([document.documentElement, document.body]
-      .filter(Boolean)
-      .pop()
-      .appendChild(document.createElement('script')));
-  })();
+  const script = document.createElement("script");
+  script.dataset.zone = "10476453";
+  script.src = "https://nap5k.com/tag.min.js";
+  script.async = true;
+  document.body.appendChild(script);
+}, []);
+
 </script>
 
 <script type="application/ld+json">
