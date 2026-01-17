@@ -1,0 +1,12 @@
+{
+  "name": "flames",
+  "short_name": "flames",
+  "description": "",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "categories": ["education", "productivity"],
+  "lang": "en"
+}

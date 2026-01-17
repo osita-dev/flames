@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 100% 98%;
+    --foreground: 340 30% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 20%;
+
+    --primary: 350 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 60% 95%;
+    --secondary-foreground: 340 30% 25%;
+
+    --muted: 340 40% 96%;
+    --muted-foreground: 340 20% 50%;
+
+    --accent: 25 95% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 30% 90%;
+    --input: 340 30% 90%;
+    --ring: 350 80% 60%;
+
+    --radius: 1rem;
+
+    /* Custom tokens */
+    --coral: 15 85% 65%;
+    --rose: 340 75% 70%;
+    --blush: 350 100% 95%;
+    --lavender: 280 60% 80%;
+    --mint: 160 50% 75%;
+    
+    --gradient-romantic: linear-gradient(135deg, hsl(350, 80%, 60%) 0%, hsl(15, 85%, 65%) 50%, hsl(40, 90%, 65%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(340, 100%, 98%) 0%, hsl(350, 100%, 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(340, 60%, 98%) 100%);
+    
+    --shadow-soft: 0 4px 20px -5px hsl(350 80% 60% / 0.2);
+    --shadow-glow: 0 0 40px -10px hsl(350 80% 60% / 0.4);
+    --shadow-card: 0 10px 40px -15px hsl(340 30% 20% / 0.1);
+
+    --font-display: 'Pacifico', cursive;
+    --font-body: 'Quicksand', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 20% 8%;
+    --foreground: 340 20% 95%;
+
+    --card: 340 20% 12%;
+    --card-foreground: 340 20% 95%;
+
+    --popover: 340 20% 12%;
+    --popover-foreground: 340 20% 95%;
+
+    --primary: 350 75% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 20% 18%;
+    --secondary-foreground: 340 20% 90%;
+
+    --muted: 340 15% 20%;
+    --muted-foreground: 340 15% 60%;
+
+    --accent: 25 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 15% 20%;
+    --input: 340 15% 20%;
+    --ring: 350 75% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-body);
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .gradient-romantic {
+    background: var(--gradient-romantic);
+  }
+  
+  .gradient-soft {
+    background: var(--gradient-soft);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .text-gradient {
+    background: var(--gradient-romantic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
